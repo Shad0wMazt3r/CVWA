@@ -11,8 +11,7 @@
 		}
 	    
         else {
-			$search = urldecode($search);
-				echo "You searched for: $search";
+				echo "You searched for: " . htmlspecialchars($search, ENT_QUOTES, 'UTF-8');
 		}
     }
 ?>
