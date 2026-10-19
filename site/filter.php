@@ -15,7 +15,7 @@
 			}
 
 			if (substr_count($category, "'") % 2 !== 0) {
-				echo "<br><br>You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '".addslashes($category)." and STATUS = 'Ativo'' at line 1.<br><br>";
+				echo "<br><br>You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '".htmlspecialchars(addslashes($category), ENT_QUOTES, 'UTF-8')." and STATUS = 'Ativo'' at line 1.<br><br>";
 			}
 						
 			else {
